@@ -57,7 +57,7 @@ scene.add(pointLight, ambientLight)
 //Me indica desde que punto viene la luz que puse en pointLight
 // const helperLight = new THREE.PointLightHelper(pointLight)
 
-//para agregar piso cuadriculado
+// // para agregar piso cuadriculado
 // const gridLight = new THREE.GridHelper(200, 50)
 // scene.add(helperLight, gridLight)
 
@@ -189,7 +189,7 @@ function moveCamera(){
     const t = document.body.getBoundingClientRect().top
     // camera.position.z = t * -0.01
     // camera.position.x = t * -0.0002
-    camera.position.z = t * -0.09
+    camera.position.y = t * -0.08
 }
 
 document.body.onscroll = moveCamera
@@ -217,14 +217,15 @@ function animate(){
 
     // planetPosition(tierraGeometry, 30)
     // const timer = Date.now() * 0.01;
-    rotation(tierraGeometry, 30)	
-    rotation(mercurioGeometry, 15)
-    rotation(venusGeometry, 20)
-    rotation(marteGeometry, 40)
-    rotation(jupiterGeometry, 50)
-    rotation(saturnoGeometry, 60)
-    rotation(uranoGeometry, 70)
-    rotation(neptunoGeometry, 80)
+   	
+    rotation(mercurioGeometry, 20)
+    rotation(venusGeometry, 30)
+    rotation(tierraGeometry, 45)
+    rotation(marteGeometry, 60)
+    rotation(jupiterGeometry, 75)
+    rotation(saturnoGeometry, 85)
+    rotation(uranoGeometry, 100)
+    rotation(neptunoGeometry, 120)
 
     torus.rotation.x += 0.01
     torus.rotation.y += 0.005
