@@ -99,9 +99,6 @@ const tierraGeometry = new THREE.Mesh(
 
 scene.add(tierraGeometry)
 
-tierraGeometry.position.z = 30
-tierraGeometry.position.setX(-30)
-
 
 const mercurio= new THREE.TextureLoader().load('img_space_plane/mercurio.png')
 
@@ -115,10 +112,6 @@ const mercurioGeometry = new THREE.Mesh(
 
 scene.add(mercurioGeometry)
 
-mercurioGeometry.position.z = 15
-
-mercurioGeometry.position.setX(-15)
-
 
 const venus = new THREE.TextureLoader().load('img_space_plane/venus.jpg')
 
@@ -131,11 +124,6 @@ const venusGeometry = new THREE.Mesh(
 
 scene.add(venusGeometry)
 
-venusGeometry.position.z = -20
-
-venusGeometry.position.setX(-20)
-
-
 const marte = new THREE.TextureLoader().load('img_space_plane/marte.jpg')
 
 const marteGeometry = new THREE.Mesh(
@@ -147,10 +135,6 @@ const marteGeometry = new THREE.Mesh(
 )
 
 scene.add(marteGeometry)
-
-marteGeometry.position.z = 35
-
-marteGeometry.position.setX(-35)
 
 
 const jupiter = new THREE.TextureLoader().load('img_space_plane/jupiter.jpg')
@@ -165,11 +149,6 @@ const jupiterGeometry = new THREE.Mesh(
 
 scene.add(jupiterGeometry)
 
-jupiterGeometry.position.z = 50
-
-jupiterGeometry.position.setX(-50)
-
-
 const saturno = new THREE.TextureLoader().load('img_space_plane/saturno.jpg')
 
 const saturnoGeometry = new THREE.Mesh(
@@ -181,11 +160,6 @@ const saturnoGeometry = new THREE.Mesh(
 )
 
 scene.add(saturnoGeometry)
-
-saturnoGeometry.position.z = 60
-
-saturnoGeometry.position.setX(60)
-
 
 const urano = new THREE.TextureLoader().load('img_space_plane/urano.jpg')
 
@@ -199,10 +173,6 @@ const uranoGeometry = new THREE.Mesh(
 
 scene.add(uranoGeometry)
 
-uranoGeometry.position.z = -70
-
-uranoGeometry.position.setX(70)
-
 const neptuno = new THREE.TextureLoader().load('img_space_plane/neptuno.jpg')
 
 const neptunoGeometry = new THREE.Mesh(
@@ -214,50 +184,25 @@ const neptunoGeometry = new THREE.Mesh(
 
 scene.add(neptunoGeometry)
 
-neptunoGeometry.position.z = -80
-
-neptunoGeometry.position.setX(80)
-
 //para mover la camara cuando haga scrooll
 function moveCamera(){
     const t = document.body.getBoundingClientRect().top
     // camera.position.z = t * -0.01
     // camera.position.x = t * -0.0002
-    camera.position.y = t * -0.06
+    camera.position.z = t * -0.09
 }
 
 document.body.onscroll = moveCamera
 
-function position_Neg_Positive (radio){
-    
-    return [radio, radio * -2 / 2]
+
+// console.log(Math.si(Date.now()   * 0.03 * 30))
+function rotation(planeta, circunferecia){
+    const timer = Date.now() / circunferecia * 0.03;
+    planeta.position.set(
+					Math.cos( timer * 0.1 ) * circunferecia,
+					Math.sin( timer * 0.1 ) * circunferecia
+				);
 }
-
-function planetPosition (planeta, radio) {
-    const z =  planeta.position.z
-    const xy = position_Neg_Positive(radio)
-    
-    const x = planeta.position.x
-    if(x < xy[0] && z === xy[0]){
-        
-        planeta.position.setX( x + 0.5)
-    }else if(x === xy[0] && z > xy[1]){
-         
-            planeta.position.setZ(z - 0.5)        
-        
-
-    }else if(z === xy[1] && x != xy[1]){
-        
-     
-        planeta.position.setX( x - 0.5)
-    }
-    else if(x === -xy[0] && z != xy[0]){
-        
-       
-        planeta.position.setZ(z + 0.5)        
-    }
-}
-
 function animate(){
     requestAnimationFrame(animate);
 
@@ -270,14 +215,16 @@ function animate(){
     neptunoGeometry.rotation.y += 0.005
     saturnoGeometry.rotation.y += 0.005
 
-    planetPosition(tierraGeometry, 30)
-    planetPosition(mercurioGeometry, 15)
-    planetPosition(venusGeometry, 20)
-    planetPosition(marteGeometry, 35)
-    planetPosition(jupiterGeometry, 50)
-    planetPosition(saturnoGeometry, 60)
-    planetPosition(uranoGeometry, 70)
-    planetPosition(neptunoGeometry, 80)
+    // planetPosition(tierraGeometry, 30)
+    // const timer = Date.now() * 0.01;
+    rotation(tierraGeometry, 30)	
+    rotation(mercurioGeometry, 15)
+    rotation(venusGeometry, 20)
+    rotation(marteGeometry, 40)
+    rotation(jupiterGeometry, 50)
+    rotation(saturnoGeometry, 60)
+    rotation(uranoGeometry, 70)
+    rotation(neptunoGeometry, 80)
 
     torus.rotation.x += 0.01
     torus.rotation.y += 0.005
