@@ -1,0 +1,311 @@
+*{
+    margin:0;
+    padding:0;
+}
+canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+main {
+    width: 100vw;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    margin: 0px auto;
+    /* padding: 120px 0px; */
+    /* background-color: #D4E6F3; */
+
+    opacity: 0.7;
+
+  }
+html{
+    scroll-behavior: smooth;
+    
+}
+header{
+    display:flex;
+    flex-direction: row; 
+    padding: 10px;
+    background-color: #D4E6F3;
+    
+}
+
+.logo{
+    display: none;
+}
+
+nav ul{
+     display:flex;
+  
+}
+
+ul li a:hover{
+    
+   color: #8f9b91;
+   /* transition-duration: 0.5s; */
+  
+}
+
+ul li{
+    
+    list-style-type: none;
+    padding: 10px;
+    
+}
+a{
+    transition-duration: 0.5s;
+    text-decoration: none;
+    color: #3F5341; 
+}
+ul li a{
+   
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+.sessionHome{
+    /* background: #D6EEFF; */
+    width: 100%;
+    height: 100vh;
+    color: #080808;
+    
+}
+
+.sessionHome h1{
+    padding: 140px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 4rem;
+    /* font-weight: bold; */
+    font-style: italic;
+}
+.animation{
+    /* margin-left: 28%; */
+    width: 50%;
+height: 10px;
+background-color: #3f5342;
+position: relative;
+animation-name: miAnimation;
+animation-duration: 6s;
+animation-timing-function:ease-in;
+animation-delay: 3s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+@keyframes miAnimation {
+0%   {background-color:#3f5342; left:0px; top:0px;}
+25%  {background-color:yellow; left:160px; top:0px;}
+50%  {background-color:blue; left:160px; top:120px;}
+75%  {background-color:green; left:0px; top:120px;}
+100% {background-color:#3f5342; left:0px; top:0px;}
+}
+h2{
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #3F5341;
+    margin-left: 10px;
+}
+
+.Container{
+    /* background-color: #D4E6F3; */
+    padding: 10px
+}
+
+.skill{
+    /* align-self: center; */
+    width: 100%;
+    padding: 5px; 
+    margin-bottom: 10px; 
+    background:#fff;
+    text-align: center;
+    font-weight: bold;
+    color: #3F5341;
+    font-size: 1.5rem;
+}
+
+.experence{
+    margin: 10px;
+    font-weight: bold;
+    color: #3F5341;
+    font-size: 1.2rem;
+}
+
+.content-aboutMe{
+   
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #3F5341;
+}
+
+.img-aboutMe{
+   
+    padding: 5px;
+}
+
+.content-aboutMe{
+    padding: 5px;
+    color: #3F5341;
+}
+.content-aboutMe span{
+    color: black;
+}
+.content-aboutMe div{
+    margin-top: 6px;
+}
+
+h5{
+    color: black;
+    font-weight: bold;
+    font-size: 1.3rem;   
+}
+
+
+.footer-1{
+    background-color: #D4E6F3;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #3F5341;
+    
+}
+
+.footer-1 div{
+    margin: 10px;
+}
+
+.footerBottom{
+text-align: center;
+border-top: 1px solid gray;
+font-size: 1.1rem;
+font-weight: bold;
+color: #000000;
+background-color: #D4E6F3;
+
+
+}
+
+
+@media only screen and (min-width: 600px) {
+    .logo{
+        display: block;
+        padding: 10px;
+        justify-self: start;
+        margin-left: 100px;
+        
+    }
+    .logo a{
+        color: black;
+    }
+    .logo a:hover{
+   color: #8f9b91;
+
+    }
+    header{
+        display:grid;
+        grid-template-columns: 40% 60%; 
+        /* justify-content: space-around; */
+    }
+    header nav{
+        justify-self: start;
+        /* margin-right: 100px; */
+    }
+   
+    .sessionHome{
+        height: 100vh;
+        text-align: center;
+        
+    }
+    .sessionHome h1{
+        font-size: 7rem;
+    align-items: center;
+       
+    }
+    .animation{
+        width: 28%;
+    height: 10px;
+    background-color: #3f5342;
+    
+    }
+    @keyframes miAnimation {
+    0%   {background-color:#3f5342; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:120px;}
+    75%  {background-color:green; left:0px; top:120px;}
+    100% {background-color:#3f5342; left:0px; top:0px;}
+    }
+
+    .Container{
+        padding-top: 50px;
+        padding-left: 150px;
+        padding-right: 150px;
+        padding-bottom: 50px;
+    }
+    .containerSkills{
+        display: flex;
+        flex-wrap: wrap;
+       justify-content: space-between;
+       
+    }
+    .skill:hover{
+        opacity: 0.7;
+        transition-duration: 1s;
+    }
+    .skill{
+        width: 20%;
+        margin: 10px;
+    }
+
+    .experence{
+       display: grid;
+       grid-template-columns: 20% 80%;
+       grid-template-rows: repeat(2, 1fr);
+       justify-content: center;
+      
+
+    }
+
+    .sessionExperience{
+        display: flex;
+        flex-flow: column;
+        
+    }
+   
+    .content-aboutMe{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .infoAboutMe{
+        margin-left: 10px;
+    }
+    .footer-1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* padding-left: 150px; 
+        padding-right: 150px; */
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+.sessionHome h1{
+    padding-top: 15%;
+    font-size: 10rem;
+   
+}
+@keyframes miAnimation {
+    0%   {background-color:#3f5342; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:180px;}
+    75%  {background-color:green; left:0px; top:180px;}
+    100% {background-color:#3f5342; left:0px; top:0px;}
+    }
+
+}

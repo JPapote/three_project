@@ -1,0 +1,76 @@
+ {
+        "skills": [
+            {
+                "img": "./img/mongodb-logo.png",
+                "name": "MongoDB",
+                "years": "+1 año"
+            },
+            {
+                "img": "./img/java-logo.jpg",
+                "name": "Java",
+                "years": "+2 años"
+            },
+            {
+                "img": "./img/next-logo.jpg",
+                "name": "Next",
+                "years": "+2 años"
+            },
+            {
+                "img": "./img/typescript-logo.jpg",
+                "name": "TypeScript",
+                "years": "+2 años"
+            },
+            {
+                "img": "./img/react-logo.jpg",
+                "name": "React.js",
+                "years": "+3 años"
+            },
+            {
+                "img": "./img/node-logo.png",
+                "name": "Node.js",
+                "years": "+3 años"
+            },
+            {
+                "img": "./img/git.jpg",
+                "name": "Git",
+                "years": "+3 años"
+            },
+            {
+                "img": "./img/postgresql-logo.jpg",
+                "name": "PostgreSQL",
+                "years": "+3 años"
+            },
+            {
+                "img": "./img/mysql-logo.jpg",
+                "name": "MySQL",
+                "years": "+4 años"
+            },
+            {
+                "img": "./img/css-logo.png",
+                "name": "CSS",
+                "years": "+4 años"
+            },
+            {
+                "img": "./img/html5-logo.png",
+                "name": "HTML",
+                "years": "+4 años"
+            },
+            {
+                "img": "./img/javascript.png",
+                "name": "JavaScript",
+                "years": "+4 años"
+            }
+        ],
+    
+    
+        "myExperience": [
+            {
+                "years": "2018 - 2019",
+                "experience": "Trabajé en el desarrollo de una plataforma web para emprendedores utilizando: React, Next.js, Redux Saga, Git/GitHub"
+            },
+            {
+                "years": "Año 2020 - actual",
+                "experience": "Ingresé a trabajar en Rol, que se encarga de realizar software a medida, trabajé principalmente en el lado del front-end utilizando: Next.js, Tailwind, Git/GitHub."
+            }
+        ]
+    }
