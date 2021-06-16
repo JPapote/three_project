@@ -81,7 +81,7 @@ function addStar() {
 Array(100).fill().forEach(addStar)
 
 //para cargar alguna imagen
-const spaceTexture = new THREE.TextureLoader().load('img_space_plane/space.jpg')
+const spaceTexture = new THREE.TextureLoader().load('img_space_plane/space.jpeg')
 
 scene.background = spaceTexture
 
@@ -187,15 +187,11 @@ scene.add(neptunoGeometry)
 //para mover la camara cuando haga scrooll
 function moveCamera(){
     const t = document.body.getBoundingClientRect().top
-    // camera.position.z = t * -0.01
-    // camera.position.x = t * -0.0002
     camera.position.y = t * -0.08
 }
 
 document.body.onscroll = moveCamera
 
-
-// console.log(Math.si(Date.now()   * 0.03 * 30))
 function rotation(planeta, radio){
     const timer = Date.now() / radio * 0.03;
     planeta.position.set(
@@ -214,9 +210,6 @@ function animate(){
     neptunoGeometry.rotation.y += 0.005
     saturnoGeometry.rotation.y += 0.005
 
-    // planetPosition(tierraGeometry, 30)
-    // const timer = Date.now() * 0.01;
-   	
     rotation(mercurioGeometry, 20)
     rotation(venusGeometry, 30)
     rotation(tierraGeometry, 45)

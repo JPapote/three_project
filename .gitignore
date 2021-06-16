@@ -4,5 +4,4 @@ dist
 dist-ssr
 *.local
 *.json
-infoAboutMe.json
 !package.json
