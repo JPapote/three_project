@@ -196,16 +196,15 @@ document.body.onscroll = moveCamera
 
 
 // console.log(Math.si(Date.now()   * 0.03 * 30))
-function rotation(planeta, circunferecia){
-    const timer = Date.now() / circunferecia * 0.03;
+function rotation(planeta, radio){
+    const timer = Date.now() / radio * 0.03;
     planeta.position.set(
-					Math.cos( timer * 0.1 ) * circunferecia,
-					Math.sin( timer * 0.1 ) * circunferecia
+					Math.cos( timer * 0.1 ) * radio,
+					Math.sin( timer * 0.1 ) * radio
 				);
 }
 function animate(){
     requestAnimationFrame(animate);
-
     marteGeometry.rotation.y += 0.005
     tierraGeometry.rotation.y += 0.005
     mercurioGeometry.rotation.y += 0.005
